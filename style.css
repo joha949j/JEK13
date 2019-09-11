@@ -1,9 +1,14 @@
+/*
 header {
     display: flex;
     justify-content: center;
     width: 100vw;
     height: 25vh;
 }
+*/
+
+
+
 
 .head {
     display: flex;
@@ -42,20 +47,38 @@ p {
 nav {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: space-between;
+}
+
+@media screen and (min-width: 600px) {
+    nav {
+        justify-content: center;
+
+    }
+
+    .filter {
+        margin-left: 20px;
+    }
+
+    .valgt {
+        margin-left: 0px;
+    }
+
+
 }
 
 
 .filter {
-    width: 20%;
-    background-color: white;
     color: red;
-    padding: 10px;
+    padding: 5px;
+    border-radius: 50px;
     margin-bottom: 10px;
     font-size: 10px;
     outline: none;
     border: 1px solid black;
     text-transform: uppercase;
+    transition: 0.3s;
+
 }
 
 .filter:hover {
@@ -81,7 +104,7 @@ nav {
 #liste {
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: 1fr;
+    grid-template-columns: 20% 1fr 1fr;
     max-width: 960px;
     margin: 0 auto;
 }
@@ -93,16 +116,18 @@ article {
 
 @media screen and (min-width: 800px) {
     #liste {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-columns: repeat(3, 3fr);
     }
 
 
 }
 
+/*
 @media screen and (min-width: 1100px) {
     #liste {
         grid-template-columns: repeat(2, 2fr);
     }
 
+*/
 
 }

@@ -14,15 +14,15 @@
  function start() {
      const dest = document.querySelector("#liste");
      const temp = document.querySelector("template");
-     rejser.innerHTML = "";
+     dest.innerHTML = "";
 
      rejser.feed.entry.forEach((rejse) => {
-         if (filter == "alle" || filter == rejser.gsx$kategori.$t) {
+         if (filter == "alle" || filter == rejse.gsx$verdensdel.$t) {
              const klon = temp.cloneNode(true).content;
              klon.querySelector("img").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
              klon.querySelector("h2").textContent = rejse.gsx$navn.$t;
              klon.querySelector("#kort").textContent = rejse.gsx$kort.$t;
-             klon.querySelector("#verdensdel").textContent = rejse.gsx$verdensdel.$t;
+             klon.querySelector("#verden").textContent = rejse.gsx$verdensdel.$t;
              dest.appendChild(klon);
              dest.lastElementChild.addEventListener("click", () => {
                  location.href = `singleView.html?navn=${rejse.gsx$navn.$t}`;
@@ -39,8 +39,8 @@
  }
 
  function filtrering() {
-     filter = this.dataset.mad;
-     document.querySelector("h1").textContent = this.textContent;
+     filter = this.dataset.kat;
+     //     document.querySelector("h1").textContent = this.textContent;
      document.querySelectorAll(".filter").forEach(elm => {
          elm.classList.remove("nu");
 
