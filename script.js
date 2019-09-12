@@ -19,7 +19,13 @@
      rejser.feed.entry.forEach((rejse) => {
          if (filter == "alle" || filter == rejse.gsx$verdensdel.$t) {
              const klon = temp.cloneNode(true).content;
+
              klon.querySelector("h2").textContent = rejse.gsx$navn.$t;
+
+             //             klon.querySelector("#kort").textContent = rejse.gsx$kort.$t;
+             //             klon.querySelector("#verden").textContent = rejse.gsx$verdensdel.$t;
+
+
              klon.querySelector("img").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
              dest.appendChild(klon);
              dest.lastElementChild.addEventListener("click", () => {
@@ -45,7 +51,3 @@
      this.classList.add("nu");
      start();
  }
-
-
- //             klon.querySelector("#kort").textContent = rejse.gsx$kort.$t;
- //             klon.querySelector("#verden").textContent = rejse.gsx$verdensdel.$t;
