@@ -7,6 +7,42 @@ header {
 }
 */
 
+body {
+    background-color: #344150;
+}
+
+.v-menu {
+    display: none;
+    padding: 0px 15px 15px 15px;
+    line-height: 50px;
+    transition: background 0.5s ease;
+    background-color: #344150;
+
+}
+
+.v-menu a {
+    text-decoration: none;
+    text-decoration-line: none;
+    color: #344150;
+    font-family: neue-haas-grotesk-display, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 1.3rem;
+}
+
+.v-menu:hover {
+    background-color: #344150;
+}
+
+.v-menu:hover a {
+    color: #ffffff;
+}
+
+.v-menu a:hover {
+    color: #E6EFF6;
+}
+
+
 
 
 
@@ -30,7 +66,7 @@ h1 {
 }
 
 h2 {
-    color: red;
+    color: #344150;
     margin-left: 10px;
     font-family: miller-display, serif;
     font-weight: 400;
@@ -67,27 +103,33 @@ nav {
 
 }
 
+.v-menu filter {}
 
 .filter {
-    color: red;
+    color: #344150;
     padding: 5px;
     border-radius: 50px;
     margin-bottom: 10px;
     font-size: 10px;
     outline: none;
-    border: 1px solid black;
+    border: 1px solid #999999;
     text-transform: uppercase;
     transition: 0.3s;
+    background-color: #F2F5FB;
 
 }
 
 .filter:hover {
-    background-color: red;
+    background-color: #344150;
     color: white;
 }
 
+article {
+    /*    border: 1px solid #999999;*/
+}
+
 .nu {
-    background-color: red;
+    background-color: #344150;
     color: white;
 }
 
@@ -96,22 +138,31 @@ nav {
     flex-direction: column;
 }
 
-#liste img {
-    width: 100%;
 
-}
 
 #liste {
     display: grid;
-    grid-gap: 10px;
+    grid-gap: 5px;
     grid-template-columns: 1fr;
-    max-width: 960px;
     margin: 0 auto;
 }
 
-article {
-    border: 1px solid #0000ff;
+img {
+    width: 100%;
+    border: 1px solid black;
+}
 
+#logo {
+    border: 0px solid black;
+    margin-bottom: 20px;
+}
+
+
+
+img:hover {
+    opacity: 0.4;
+    background-color: black;
+    transition: all 0.3s;
 }
 
 @media screen and (min-width: 800px) {
@@ -122,12 +173,42 @@ article {
 
 }
 
-/*
+
+
+
 @media screen and (min-width: 1100px) {
     #liste {
-        grid-template-columns: repeat(2, 2fr);
+        grid-template-areas:
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article"
+            "v-menu article article";
+        grid-template-columns: 15% 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-area: article;
+
     }
 
-*/
+
+    .v-menu {
+        display: flex;
+        flex-direction: column;
+        grid-area: v-menu;
+
+    }
 
 }
