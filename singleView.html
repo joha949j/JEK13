@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <style>
+        #single {
+            position: fixed;
+            top 0;
+            background-color: white;
+            width: 100vw;
+            height: 100vh;
+            /*            display: none;*/
+
+        }
+
+        .indhold {
+            width: 70vw;
+            min-height: 50vh;
+            background: white;
+            margin: 4rem auto;
+            padding: 10px;
+        }
+
+        .luk {
+            position: fixed;
+            left: 2;
+            font-size: 2rem;
+            border-radius: 10px;
+            border: none;
+            background-color: white;
+            color: #0000ff;
+        }
+
+        img {
+            width: 100%;
+        }
+
+        h2 {
+            color: red;
+            font-family: miller-display, serif;
+            font-weight: 400;
+            font-style: normal;
+            text-transform: uppercase;
+        }
+
+        p {
+            font-size: 13px;
+        }
+    </style>
+</head>
+
+
+<body>
+    <main id="single">
+        <button class="luk" href="index.html">←</button>
+        <section class="indhold">
+            <article class="singleRejse">
+                <h2></h2>
+                <img class="billede" src="" alt="">
+                <p class="lang"></p>
+                <p class="hvor"></p>
+                <p class="verden"></p>
+            </article>
+        </section>
+    </main>
+
+    <script>
+        let urlParams = new URLSearchParams(window.location.search);
+        let navn = urlParams.get("navn");
+        console.log("navn", navn);
+        let rejser;
+        document.addEventListener("DOMContentLoaded", getJson);
+
+
+        async function getJson() {
+            let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/10-V6mdF7edqkvZKgdKcaGvsdOC_mudHxh8SOal_2iEs/od6/public/values?alt=json");
+            console.log("jsonData", jsonData);
+            rejser = await jsonData.json();
+            visRejser();
+        }
+
+
+        function visRejser() {
+            rejser.feed.entry.forEach(rejse => {
+                if (rejse.gsx$navn.$t == navn) {
+                    console.log("visRejser", navn);
+
+                    document.querySelector(".singleRejse h2").textContent = rejse.gsx$navn.$t;
+                    document.querySelector(".singleRejse .lang").textContent = rejse.gsx$lang.$t;
+                    document.querySelector(".singleRejse .hvor").textContent = ("Hvor: ") + rejse.gsx$verdensdel.$t;
+                    document.querySelector(".singleRejse .verden").textContent = rejse.gsx$kategori.$t;
+                    document.querySelector(".singleRejse .billede").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
+                    document.querySelector(".singleRejse .billede").alt = `imgs/${rejse.gsx$billede.$t}.jpg`;
+
+
+                }
+
+            })
+
+
+        }
+        document.querySelector(".luk").addEventListener("click", () => {
+            history.back();
+        });
+    </script>
+
+</body></html>

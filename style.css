@@ -147,14 +147,21 @@ article {
     margin: 0 auto;
 }
 
+#logo {
+    border: 0px solid black;
+    margin-bottom: 20px;
+}
+
 img {
     width: 100%;
     border: 1px solid black;
 }
 
-#logo {
-    border: 0px solid black;
-    margin-bottom: 20px;
+
+
+#logo:hover {
+    opacity: 1;
+    background-color: ;
 }
 
 
