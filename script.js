@@ -20,13 +20,8 @@
          if (filter == "alle" || filter == rejse.gsx$verdensdel.$t) {
              const klon = temp.cloneNode(true).content;
 
-             klon.querySelector("h2").textContent = rejse.gsx$navn.$t;
-
-             //             klon.querySelector("#kort").textContent = rejse.gsx$kort.$t;
-             //             klon.querySelector("#verden").textContent = rejse.gsx$verdensdel.$t;
-
-
              klon.querySelector("img").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
+             klon.querySelector("h2").textContent = rejse.gsx$navn.$t;
              dest.appendChild(klon);
              dest.lastElementChild.addEventListener("click", () => {
                  location.href = `singleView.html?navn=${rejse.gsx$navn.$t}`;
