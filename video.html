@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="da">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landingpage</title>
+    <link rel="stylesheet" href="https://use.typekit.net/eeb5vls.css">
+
+
+</head>
+<style>
+    #videoBG {
+        position: fixed;
+        z-index: -1;
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+    }
+
+    @media (min-aspect-ratio: 16/9) {
+
+        #videoBG {
+            width: 100vw;
+            height: auto;
+        }
+    }
+
+    @media (max-aspect-ratio: 16/9) {
+        #videoBG {
+            width: auto;
+            height: 100vh;
+        }
+    }
+
+    body {
+        background-size: cover;
+        margin: 0;
+    }
+
+    #container {
+        position: absolute;
+        cursor: pointer;
+    }
+
+    #sprite {
+        background-image: url(arrow_logo.svg);
+        background-size: 100%;
+        width: 14vw;
+        height: 14vw;
+        cursor: pointer;
+    }
+
+    .position {
+        right: 0vw;
+        bottom: 2vw;
+    }
+
+    .pulse {
+        animation-name: pulse_kf;
+        animation-duration: 1.7s;
+        animation-iteration-count: infinite;
+        animation-direction: alternate;
+        animation-timing-function: ease-in;
+    }
+
+    @keyframes pulse_kf {
+        0% {
+            transform: scale(0.98);
+        }
+
+        100% {
+            transform: scale(1.2);
+        }
+    }
+
+    h1 {
+        color: #D7D7D7;
+        font-size: 3.1rem;
+        margin-top: 0;
+        padding-top: 2.5vw;
+        font-family: fenwick-outline, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+        text-align: center;
+        width: 8vw;
+    }
+</style>
+
+<body>
+    <video id="videoBG" autoplay muted loop>
+        <source src="video_JEK.mp4" type="video/mp4">
+    </video>
+    <h1>R<br>E<br>J<br>S<br>E<br>I<br>N<br>D<br>E<br>X</h1>
+    <div id="container" class="position">
+        <a href="index.html">
+            <div id="sprite" class="pulse">
+            </div>
+        </a>
+    </div>
+</body>
+<script>
+    function sidenVises() {
+        console.log("sidenVises");
+        document.querySelector("#sprite").classList.add("pulse");
+        document.querySelector("#sprite").addEventListener("click");
+    }
+</script></html>

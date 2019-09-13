@@ -1,0 +1,15 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="210mm" height="297mm" viewBox="0 0 595.28 841.89">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #fff;
+      }
+    </style>
+  </defs>
+  <title>arrow_logo</title>
+  <g>
+    <rect class="cls-1" x="260.4" y="319.23" width="259.28" height="71.62" rx="35.81" transform="translate(365.29 -171.81) rotate(45)"/>
+    <rect class="cls-1" x="260.4" y="452.78" width="259.28" height="71.62" rx="35.81" transform="translate(-231.25 418.9) rotate(-45)"/>
+    <rect class="cls-1" x="122.85" y="385.13" width="319.51" height="71.62" rx="35.81"/>
+  </g>
+</svg>
