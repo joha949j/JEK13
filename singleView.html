@@ -102,8 +102,6 @@
 
                     document.querySelector(".singleRejse h2").textContent = rejse.gsx$navn.$t;
                     document.querySelector(".singleRejse .lang").textContent = rejse.gsx$lang.$t;
-                    document.querySelector(".singleRejse .hvor").textContent = ("Hvor: ") + rejse.gsx$verdensdel.$t;
-                    document.querySelector(".singleRejse .verden").textContent = rejse.gsx$kategori.$t;
                     document.querySelector(".singleRejse .billede").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
                     document.querySelector(".singleRejse .billede").alt = `imgs/${rejse.gsx$billede.$t}.jpg`;
 

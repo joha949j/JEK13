@@ -55,7 +55,7 @@ h2 {
 
 article {
     position: relative;
-    background-color: black;
+
 }
 
 p {
@@ -67,6 +67,7 @@ p {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
+
 }
 
 @media screen and (min-width: 600px) {
@@ -128,8 +129,7 @@ p {
 }
 
 #logo {
-    width: 50%;
-    align-self: flex-end;
+    width: 100%;
     margin-bottom: 30px;
 
 }
@@ -138,15 +138,6 @@ article img {
     width: 100%;
     border: 1px solid black;
 }
-
-
-
-#logo:hover {
-    opacity: 1;
-    background-color: ;
-}
-
-
 
 article:hover img {
     opacity: 0.4;
@@ -157,6 +148,15 @@ article:hover h2 {
     display: block;
 }
 
+#logo:hover {
+    opacity: 1;
+    background-color: ;
+}
+
+
+
+
+
 /*
 @media screen and (min-width: 800px) {
     #liste {
@@ -164,6 +164,54 @@ article:hover h2 {
     }
 
 
+}
+*/
+
+
+/*SIDEBAR/BURGERMENU*/
+/*
+#sidebar {
+    width: 200px;
+    height: 100%;
+    position: fixed;
+    background-color: #333333;
+    left: -200px;
+    transition: all 400ms linear;
+}
+
+#sidebar.active {
+    left: 0px;
+}
+
+#sidebar ul li {
+    color: white;
+    list-style: none;
+    padding: 15px 10px;
+    border-bottom: 1px solid grey;
+}
+
+#sidebar .toggle_btn {
+    position: absolute;
+    left: 200px;
+    top: 20px;
+    width: 50px;
+    height: 50px;
+    margin: 3px 0px;
+}
+
+#sb_img {
+    width: 20px;
+    height: 10px;
+}
+
+#sidebar .toggle_btn span {
+    display: block;
+    width: 30px;
+    height: 5px;
+    background-color: #ffffff;
+    margin: 3px 0px;
+    grid-column-end: -1;
+    z-index: 1000;
 }
 */
 
@@ -185,6 +233,25 @@ article:hover h2 {
         align-self: flex-start;
         flex-direction: column;
     }
+
+    /*
+    #mainNav {
+        display: block;
+        justify-content: center;
+    }
+
+    .filter {
+        margin-left: 20px;
+    }
+
+    .valgt {
+        margin-left: 0px;
+    }
+
+    #sidebar {
+        display: none;
+    }
+*/
 
 
 }
