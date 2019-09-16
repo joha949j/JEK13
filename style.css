@@ -8,31 +8,10 @@ header {
 */
 
 body {
-    background-color: #344150;
+    background-color: #809ab2;
 }
 
-.subNav {
-    display: none;
-    padding: 0px 15px 15px 15px;
-    line-height: 50px;
-    transition: background 0.5s ease;
-    background-color: #344150;
 
-}
-
-.head {
-    display: flex;
-    align-items: center;
-    height: 25vh;
-}
-
-.head p {
-    color: red;
-    font-family: miller-display, serif;
-    font-weight: 400;
-    font-style: italic;
-    font-size: 5rem;
-}
 
 h1 {
     color: white;
@@ -41,21 +20,17 @@ h1 {
 
 h2 {
     color: white;
-    font-family: miller-display, serif;
+    font-family: fenwick-outline, sans-serif;
     font-weight: 400;
     font-style: normal;
     text-transform: uppercase;
-    font-size: 16px;
+    font-size: 1.5rem;
     position: absolute;
     top: 50%;
-    left: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     z-index: 100;
     display: none;
-}
-
-article {
-    position: relative;
-
 }
 
 p {
@@ -63,75 +38,8 @@ p {
     font-size: 11px;
 }
 
-#mainNav {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-
-}
-
-@media screen and (min-width: 600px) {
-    #mainNav {
-        justify-content: center;
-
-    }
-
-    .filter {
-        margin-left: 20px;
-    }
-
-    .valgt {
-        margin-left: 0px;
-    }
-
-
-}
-
-
-
-.filter {
-    color: #344150;
-    padding: 5px;
-    border-radius: 50px;
-    margin-bottom: 10px;
-    font-size: 10px;
-    outline: none;
-    border: 1px solid #999999;
-    text-transform: uppercase;
-    transition: 0.3s;
-    background-color: #F2F5FB;
-
-}
-
-.filter:hover {
-    background-color: #344150;
-    color: white;
-}
-
-
-.nu {
-    background-color: #344150;
-    color: white;
-}
-
-.template {
-    display: flex;
-    flex-direction: column;
-}
-
-
-
-#liste {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: 1fr;
-    margin: 0 auto;
-}
-
-#logo {
-    width: 100%;
-    margin-bottom: 30px;
-
+article {
+    position: relative;
 }
 
 article img {
@@ -148,35 +56,86 @@ article:hover h2 {
     display: block;
 }
 
-#logo:hover {
-    opacity: 1;
-    background-color: ;
+/*Main nav*/
+#mainNav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+/*Subnav i 900+ px*/
+.subNav {
+    display: none;
+    padding: 0px 15px 15px 15px;
+    line-height: 50px;
+    transition: background 0.5s ease;
+    background-color: #809ab2;
+
+}
+
+/*Knapper styling*/
+.filter {
+    color: #344150;
+    margin-bottom: 10px;
+    font-size: 1.5rem;
+    outline: none;
+    border: 1px solid #999999;
+    text-transform: uppercase;
+    transition: 0.3s;
+    background-color: #F2F5FB;
+    /*    width: 50vw;*/
+}
+
+/*knapper hover*/
+.filter:hover {
+    background-color: #344150;
+    color: white;
+}
+
+
+/*valgt filter*/
+.nu {
+    background-color: #344150;
+    color: white;
+}
+
+
+.template {
+    display: flex;
+    flex-direction: column;
 }
 
 
 
+#liste {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: 1fr;
+    margin: 0 auto;
+}
 
-
-/*
-@media screen and (min-width: 800px) {
-    #liste {
-        grid-template-columns: repeat(2, 2fr);
-    }
-
+/*logo i 900px+*/
+#logo {
+    width: 100%;
+    margin-bottom: 30px;
 
 }
-*/
+
 
 
 /*SIDEBAR/BURGERMENU*/
-/*
+
 #sidebar {
     width: 200px;
     height: 100%;
     position: fixed;
     background-color: #333333;
+    opacity: 0.7;
     left: -200px;
     transition: all 400ms linear;
+    z-index: 100;
+    margin-top: 85px;
+
 }
 
 #sidebar.active {
@@ -190,35 +149,34 @@ article:hover h2 {
     border-bottom: 1px solid grey;
 }
 
-#sidebar .toggle_btn {
-    position: absolute;
+.toggle_btn {
     left: 200px;
     top: 20px;
-    width: 50px;
-    height: 50px;
-    margin: 3px 0px;
 }
 
 #sb_img {
-    width: 20px;
-    height: 10px;
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    left: 5px;
 }
 
-#sidebar .toggle_btn span {
+.toggle_btn span {
     display: block;
     width: 30px;
     height: 5px;
     background-color: #ffffff;
-    margin: 3px 0px;
-    grid-column-end: -1;
-    z-index: 1000;
+    margin: 1px 5px 5px 10px;
+
 }
-*/
 
 
+/*mediaquerrys*/
+
+@media screen and (min-width: 600px) {}
 
 
-@media screen and (min-width: 1100px) {
+@media screen and (min-width: 900px) {
     #liste {
         grid-template-columns: 1fr 1fr;
     }
@@ -234,24 +192,22 @@ article:hover h2 {
         flex-direction: column;
     }
 
-    /*
+    .toggle_btn {
+        display: none;
+    }
+
     #mainNav {
-        display: block;
         justify-content: center;
+        flex-wrap: nowrap;
     }
 
     .filter {
         margin-left: 20px;
+        font-size: 0.7rem;
     }
 
     .valgt {
         margin-left: 0px;
     }
-
-    #sidebar {
-        display: none;
-    }
-*/
-
 
 }

@@ -6,17 +6,17 @@ document.addEventListener("DOMContentLoaded", getJson);
 
 
 /********BURGERMENU***/
-//window.addEventListener("load", sidenVises);
-//
-//function sidenVises() {
-//    console.log("sidenVises");
-//    document.querySelector(".toggle_btn").addEventListener("click", toggleSidebar);
-//}
-//
-//function toggleSidebar() {
-//    console.log("toggleSidebar");
-//    document.getElementById("sidebar").classList.toggle('active');
-//}
+window.addEventListener("load", sidenVises);
+
+function sidenVises() {
+    console.log("sidenVises");
+    document.querySelector(".toggle_btn").addEventListener("click", toggleSidebar);
+}
+
+function toggleSidebar() {
+    console.log("toggleSidebar");
+    document.getElementById("sidebar").classList.toggle('active');
+}
 
 async function getJson() {
     let jsonData = await fetch("https://spreadsheets.google.com/feeds/list/10-V6mdF7edqkvZKgdKcaGvsdOC_mudHxh8SOal_2iEs/od6/public/values?alt=json");
