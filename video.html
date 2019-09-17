@@ -5,7 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>landingpage</title>
-    <link rel="stylesheet" href="https://use.typekit.net/eeb5vls.css">
+    <link rel="stylesheet" href="https://use.typekit.net/hxi3fcy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tod8cim.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dlq1piv.css">
 
 
 </head>
@@ -52,27 +54,10 @@
     }
 
     .position {
-        right: 0vw;
-        bottom: 2vw;
+        right: 3vw;
+        bottom: 4vw;
     }
 
-    .pulse {
-        animation-name: pulse_kf;
-        animation-duration: 1.7s;
-        animation-iteration-count: infinite;
-        animation-direction: alternate;
-        animation-timing-function: ease-in;
-    }
-
-    @keyframes pulse_kf {
-        0% {
-            transform: scale(0.98);
-        }
-
-        100% {
-            transform: scale(1.2);
-        }
-    }
 
     h1 {
         color: #D7D7D7;
@@ -85,6 +70,48 @@
         text-align: center;
         width: 8vw;
     }
+
+
+    /*    prøve*/
+    .btn {
+        border-radius: 50px 50px;
+        border: 3px solid #FFFFFF;
+        color: #FFFFFF;
+        text-align: center;
+        font-size: 1.5rem;
+        padding: 20px;
+        width: 200px;
+        transition: all 0.4s;
+        cursor: pointer;
+        margin: 5px;
+        text-decoration: none;
+        font-family: facto, sans-serif;
+        font-weight: 400;
+        font-style: normal;
+    }
+
+    .btn span {
+        position: relative;
+        transition: 0.4s;
+    }
+
+    .btn span:after {
+        content: '\00bb';
+        position: absolute;
+        opacity: 0;
+        top: 0;
+        right: -20px;
+        transition: 0.5s;
+    }
+
+    .btn:hover span {
+        padding-right: 25px;
+    }
+
+    .btn:hover span:after {
+        opacity: 1;
+        right: 0;
+    }
 </style>
 
 <body>
@@ -93,9 +120,11 @@
     </video>
     <h1>R<br>E<br>J<br>S<br>E<br>I<br>N<br>D<br>E<br>X</h1>
     <div id="container" class="position">
-        <a href="index.html">
+        <a class="btn" href="index.html"><span>FORTSÆT</span>
+            <!--
             <div id="sprite" class="pulse">
             </div>
+-->
         </a>
     </div>
 </body>

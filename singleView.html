@@ -5,6 +5,10 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title></title>
+    <link rel="stylesheet" href="https://use.typekit.net/hxi3fcy.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tod8cim.css">
+    <link rel="stylesheet" href="https://use.typekit.net/dlq1piv.css">
+
     <style>
         html {
             background-color: #344150;
@@ -17,6 +21,7 @@
             height: 100vh;
             overflow: scroll;
 
+
         }
 
 
@@ -26,9 +31,11 @@
             margin: 4rem auto;
             padding: 10px;
             background-color: #344150;
+
+
         }
 
-        .singleRejse {}
+
 
         .luk {
             position: fixed;
@@ -42,39 +49,92 @@
 
         img {
             width: 100%;
+            height: auto;
 
         }
 
         h2 {
             color: #ffffff;
-            font-family: miller-display, serif;
+            font-family: facto, sans-serif;
             font-weight: 400;
+            font-size: 1.5rem;
             font-style: normal;
             text-transform: uppercase;
 
         }
 
         p {
-            font-size: 13px;
+            font-family: facto, sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 1rem;
             color: aliceblue;
             line-height: 17px;
 
         }
 
+        header {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+
+        }
+
+        header h1 {
+            font-family: fenwick-outline, sans-serif;
+            font-weight: 300;
+            font-style: normal;
+            font-size: 3rem;
+            text-transform: uppercase;
+            margin-bottom: 0px;
+            text-align: center;
+            color: #ffffff;
+        }
+
+        header h3 {
+            font-family: facto, sans-serif;
+            font-weight: 400;
+            font-style: italic;
+            color: white;
+            font-size: 0.8rem;
+            text-align: center;
+            margin-top: 0px;
+
+
+        }
+
+        @media screen and (min-width: 900px) {
+
+            .singleRejse {
+                display: grid;
+                grid-template-columns: 1fr 30%;
+                grid-gap: 20px;
+            }
+        }
     </style>
 </head>
 
 
 <body>
+    <header>
+        <h1>Rejseindex</h1>
+        <h3>- Din guide til uforglemmelige rejsedestinationer</h3>
+    </header>
+
     <main id="single">
         <button class="luk" href="index.html">←</button>
         <section class="indhold">
             <article class="singleRejse">
                 <img class="billede" src="" alt="">
-                <h2></h2>
-                <p class="lang"></p>
+                <div>
+                    <h2></h2>
+                    <p class="lang"></p>
+                </div>
+                <!--
                 <p class="hvor"></p>
                 <p class="verden"></p>
+-->
             </article>
         </section>
     </main>
@@ -115,9 +175,6 @@
         document.querySelector(".luk").addEventListener("click", () => {
             history.back();
         });
-
     </script>
 
-</body>
-
-</html>
+</body></html>

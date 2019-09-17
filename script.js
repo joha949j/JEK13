@@ -34,7 +34,6 @@ function start() {
     rejser.feed.entry.forEach((rejse) => {
         if ((filter == "alle" || filter == rejse.gsx$verdensdel.$t) && (type == "alle" || type == rejse.gsx$kategori.$t)) {
             const klon = temp.cloneNode(true).content;
-
             klon.querySelector("img").src = `imgs/${rejse.gsx$billede.$t}.jpg`;
             klon.querySelector("h2").textContent = rejse.gsx$navn.$t;
             dest.appendChild(klon);
@@ -62,7 +61,15 @@ function filtrering() {
 
     })
     this.classList.add("nu");
+
+
+    document.querySelectorAll(".type").forEach(elm => {
+        elm.classList.remove("nu");
+
+    })
+    type = "alle";
     start();
+
 }
 
 function filtreringstype() {
